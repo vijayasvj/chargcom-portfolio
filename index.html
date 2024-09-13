@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ChargCom - Power the Future with EV Charging Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background: linear-gradient(to right, #004aad, #0073e6);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        header img {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            width: 180px;
+            border-radius: 10px;
+            animation: slideInRight 1s ease-in-out;
+        }
+
+        section {
+            padding: 60px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-us {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .about-us img {
+            width: 40%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .about-us img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-us .text {
+            width: 55%;
+        }
+
+        .about-us h2 {
+            color: #004aad;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border-left: 5px solid #004aad;
+            padding-left: 15px;
+        }
+
+        .about-us p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .mission-vision {
+            background-color: #e9f1fb;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 60px 0;
+            border-radius: 8px;
+        }
+
+        .mission, .vision {
+            width: 45%;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mission-vision h2 {
+            color: #0073e6;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .services {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .services h2 {
+            color: #004aad;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .services h2::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #0073e6;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services ul li {
+            padding: 10px 0;
+            font-size: 1.2rem;
+            color: #444;
+            transition: color 0.3s;
+        }
+
+        .services ul li:hover {
+            color: #0073e6;
+        }
+
+        .services img {
+            width: 50%;
+            margin-top: 40px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .services img:hover {
+            transform: scale(1.05);
+        }
+
+        .why-choose-us {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-us h2 {
+            color: #0073e6;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .why-choose-us-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .why-choose-us-content div {
+            flex: 1;
+            min-width: 45%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .why-choose-us-content div:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-choose-us-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-choose-us-content ul li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1.5rem;
+            }
+
+            header img {
+                top: 10px;
+                right: 10px;
+                width: 130px;
+            }
+
+            .about-us {
+                flex-direction: column;
+            }
+
+            .about-us .text,
+            .about-us img {
+                width: 100%;
+            }
+
+            .mission, .vision {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .services img {
+                width: 80%;
+            }
+
+            .why-choose-us-content div {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+
+            .services h2 {
+                font-size: 1.5rem;
+            }
+
+            .services img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ChargCom</h1>
+        <h2>Power the Future with EV Charging Solutions</h2>
+        <img src="https://via.placeholder.com/150" alt="Electric Vehicle Charger">
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us container">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>At Chargcom, we are dedicated to powering the future of transportation by providing reliable, efficient,
+                and sustainable EV charger installation solutions. Based in [Location], we specialize in installing a wide
+                range of electric vehicle charging stations for homes, businesses, and public spaces. Our mission is to
+                accelerate the adoption of electric vehicles by making charging infrastructure easily accessible and
+                hassle-free for everyone.</p>
+        </div>
+        <img src="https://via.placeholder.com/400x300" alt="About Us Image">
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section class="mission-vision container">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>To empower the shift to electric mobility by providing comprehensive EV charging solutions that are
+                accessible, affordable, and environmentally responsible.</p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p>A future where electric vehicle charging is as seamless and ubiquitous as fueling a traditional vehicle,
+                driving the world towards a cleaner, greener tomorrow.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services container">
+        <h2>Our Services</h2>
+        <ul>
+            <li><strong>Residential EV Charger Installation:</strong> Whether you're a homeowner looking to install a
+                charger or upgrade your current setup, we offer customized solutions that fit your needs and budget.</li>
+            <li><strong>Commercial EV Charger Installation:</strong> We partner with businesses, property managers, and
+                developers to design and implement scalable EV charging solutions, creating a future-proof environment for
+                EV users.</li>
+            <li><strong>Public Charging Stations:</strong> We assist local governments and private entities in installing
+                public charging stations, supporting the growing demand for accessible EV infrastructure.</li>
+        </ul>
+        <img src="https://via.placeholder.com/500x300" alt="Services Image">
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us container">
+        <h2>Why Choose Us</h2>
+        <div class="why-choose-us-content">
+            <div>
+                <ul>
+                    <li><strong>Expertise & Experience:</strong> Our team of certified electricians and technicians has
+                        extensive experience in EV charger installation and is trained in the latest industry standards and
+                        best practices.</li>
+                    <li><strong>Sustainability Focus:</strong> We are committed to supporting the transition to cleaner
+                        energy. By installing EV chargers, we contribute to reducing carbon emissions and promoting a more
+                        sustainable future.</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><strong>Customer-Centric Approach:</strong> From the initial consultation to post-installation
+                        support, we prioritize our customers' needs, offering transparent pricing, efficient installations,
+                        and responsive customer service.</li>
+                    <li><strong>Cutting-Edge Technology:</strong> We work with top-tier brands and the latest technologies
+                        to ensure that our customers receive high-quality, reliable, and future-proof EV charging
+                        solutions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 ChargCom | <a href="https://www.chargcom.in">www.chargcom.in</a></p>
+    </footer>
+
+</body>
+
+</html>
