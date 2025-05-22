@@ -4439,42 +4439,42 @@ export const location = {
 // };
 
 export const depot: DepotStructure = {
-  "SRR - CHTS": {
+  "SRR-CHTS": {
     "S&T": ["TCR", "AWY", "ERS"],
     "ENGG": ["TCR", "CKI", "AWY", "ERS"],
     "TRD": ["TCR", "CKI", "ERS"]
   },
- "ERS - KTYM - KYJ": {
+ "ERS-KTYM-KYJ": {
     "S&T": ["ERS", "KYTM", "KYJ"],
     "ENGG": ["ERS", "PVRD", "KTYM", "MVLK"],
     "TRD": ["ERS", "KTYM", "KYJ"]
   },
-  "ERS - ALLP - KYJ": {
+  "ERS-ALLP-KYJ": {
     "S&T": ["ERS", "KYJ", "ALLP"],
     "ENGG": ["ERS", "ALLP", "MVLK"],
     "TRD": ["ERS", "ALLP", "KYJ"]
   },
- "KYJ - QLN": {
+ "KYJ-QLN": {
     "S&T": ["KYJ", "QLN"],
     "ENGG": ["MVLK", "QLN"],
     "TRD": ["KYJ", "QLN"]
   },
-  "QLN - TVC": {
+  "QLN-TVC": {
     "S&T": ["QLN", "TVC"],
     "ENGG": ["QLN", "VAK", "TVC"],
     "TRD": ["QLN", "KZK"]
   },
-  "TVC - NCJ": {
+  "TVC-NCJ": {
     "S&T": ["TVC", "NCJ"],
     "ENGG": ["TVC", "NCJ"],
     "TRD": ["KZK", "NCJ"]
   },
- "NCJ - TEN": {
+ "NCJ-TEN": {
     "S&T": ["NCJ"],
     "ENGG": ["NCJ"],
     "TRD": ["NCJ", "NNN"]
   },
-  "NCJ - CAPE": {
+  "NCJ-CAPE": {
     "S&T": ["NCJ"],
     "ENGG": ["NCJ"],
     "TRD": ["NCJ"]
