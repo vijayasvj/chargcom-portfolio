@@ -3106,7 +3106,7 @@ export let MajorSection = {
 
 
 export let blockSection = {
-  "SRR - CHTS": [
+  "SRR-CHTS": [
     "SRRB-VTK", "VTK-WKI", "WKI-MGK", "MGK-PNQ", "PNQ-TCR",
     "TCR-OLR", "OLR-PUK", "PUK-IJK", "IJK-CKI", "CKI-KUC",
     "KUC-AFK", "AFK-AWY", "AWY-KLMR", "KLMR-IPL", "IPL-VPDM",
@@ -3115,42 +3115,42 @@ export let blockSection = {
     "CKI-YD", "KUC-YD", "AFK-YD", "AWY-YD", "KLMR-YD", "IPL-YD", "VPDM-YD", "ERN-YD",
     "ERS-YD", "CHTS-YD"
   ],
-  "TCR - GUV": [
+  "TCR-GUV": [
     "TCR-PNQ", "PNQ-GUV",
     "TCR-YD", "PNQ-YD", "GUV-YD"
   ],
-  "ERS - KTYM - KYJ": [
+  "ERS-KTYM-KYJ": [
     "ERS-TRTR", "TRTR-MNTT", "TRTR-IPN", "MNTT-PVRD", "PVRD-VARD",
     "VARD-KRPP", "KRPP-ETM", "ETM-KTYM", "KTYM-CGV", "CGV-CGY",
     "CGY-TRVL", "TRVL-CNGR", "CNGR-MVLK", "MVLK-KYJ",
     "ERS-YD", "TRTR-YD", "MNTT-YD", "PVRD-YD", "VARD-YD", "KRPP-YD", "ETM-YD",
     "KYTM-YD", "CGV-YD", "CGY-YD", "TVRL-YD", "CNGR-YD", "MVLK-YD", "KYJ-YD"
   ],
-  "ERS - ALLP - KYJ": [
+  "ERS-ALLP-KYJ": [
     "ERS-KUMM", "KUMM-TUVR", "TUVR-SRTL", "SRTL-MAKM", "MAKM-ALLP",
     "ALLP-AMPA", "AMPA-HAD", "HAD-CHPD", "CHPD-KYJ",
     "ERS-YD", "KUMM-YD", "TUVR-YD", "SRTL-YD", "MAKM-YD", "ALLP-YD", "AMPA-YD",
     "HAD-YD", "CHPD-YD", "KYJ-YD"
   ],
-  "KYJ - QLN": [
+  "KYJ-QLN": [
     "KYJ-OCR", "OCR-KPY", "KPY-STKT", "STKT-PRND", "PRND-QLN",
     "KYJ-YD", "OCR-YD", "KPY-YD", "STKT-YD", "PRND-YD", "OLN-YD"
   ],
-  "QLN - TVC": [
+  "QLN-TVC": [
     "QLN-PVU", "PVU-VAK", "VAK-KVU", "KVU-MQU", "MQU-KZK",
     "KZK-TVCN", "TVCN-TVC",
     "QLN-YD", "PVU-YD", "VAK-YD", "KVU-YD", "MQU-YD", "KZK-YD", "KCVL-YD", "TVC-YD"
   ],
-  "TVC - NCJ": [
+  "TVC-NCJ": [
     "TVC-TVCS", "TVCS-NYY", "NYY-PASA", "PASA-KZT", "KZT-ERL",
     "ERL-NJT", "NJT-NCJ",
     "TVC-YD", "NEM-YD", "NYY-YD", "PASA-YD", "KZT-YD", "ERL-YD", "NJT-YD", "NCJ-YD"
   ],
-  "NCJ - TEN": [
+  "NCJ-TEN": [
     "NCJ-AAY", "AAY-NPK", "NPK-VLY", "VLY-NNN", "NNN-MP", "MP-TEN",
     "NCJ-YD", "AAY-YD", "NPK-YD", "VLY-YD", "NNN-YD", "MP-YD", "TEN-YD"
   ],
-  "NCJ - CAPE": [
+  "NCJ-CAPE": [
     "NCJ-CAPE",
     "NCJ-YD", "CAPE-YD"
   ]
