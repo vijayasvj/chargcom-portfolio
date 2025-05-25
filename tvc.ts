@@ -3767,655 +3767,89 @@ export const streamData = {
 
 
 export let lineData = {
-  // TPJ-VM Section - All are UP and DN lines (Double line section)
-  'TPJ-GOC': ['UP', 'DN'],  // Junction point with TPJ-MV and TPJ-TP
-  'GOC-TPTN': ['UP', 'DN'],
-  'TPTN-SRGM': ['UP', 'DN'],
-  'SRGM-VLDE': ['UP', 'DN'],
-  'VLDE-LLI': ['UP', 'DN'],
-  'LLI-PMB': ['UP', 'DN'],
-  'PMB-KKPM': ['UP', 'DN'],
-  'KKPM-KLGM': ['UP', 'DN'],
-  'KLGM-SLT': ['UP', 'DN'],
-  'SLT-ALU': ['UP', 'DN'],
-  'ALU-OTK': ['UP', 'DN'],
-  'OTK-SNDI': ['UP', 'DN'],
-  'SNDI-MTUR': ['UP', 'DN'],
-  'MTUR-ICG': ['UP', 'DN'],
-  'ICG-TLNR': ['UP', 'DN'],
-  'TLNR-VRI': ['UP', 'DN'],  // Junction with CUPJ-VRI line
-  'VRI-PVN': ['UP', 'DN'],
-  'PVN-ULU': ['UP', 'DN'],
-  'ULU-PRKL': ['UP', 'DN'],
-  'PRKL-TVNL': ['UP', 'DN'],
-  'TVNL-KDMD': ['UP', 'DN'],
-  'KDMD-VM': ['UP', 'DN'],  // Junction with VM-MV, VM-PDY, and KPD-VM lines
-
-  // Yard connections for TPJ-VM
-  'TPJ-YD': ['UP', 'DN'],
-  'GOC-YD': ['UP', 'DN'],
-  'SRGM-YD': ['UP', 'DN'],
-  'VLDE-YD': ['UP', 'DN'],
-  'LLI-YD': ['UP', 'DN'],
-  'PMB-YD': ['UP', 'DN'],
-  'KKPM-YD': ['UP', 'DN'],
-  'KLGM-YD': ['UP', 'DN'],
-  'SLT-YD': ['UP', 'DN'],
-  'ALU-YD': ['UP', 'DN'],
-  'OTK-YD': ['UP', 'DN'],
-  'SNDI-YD': ['UP', 'DN'],
-  'MTUR-YD': ['UP', 'DN'],
-  'ICG-YD': ['UP', 'DN'],
-  'TLNR-YD': ['UP', 'DN'],
-  'VRI-YD': ['UP', 'DN'],  // Appears in both TPJ-VM and CUPJ-VRI sections
-  'PVN-YD': ['UP', 'DN'],
-  'ULU-YD': ['UP', 'DN'],
-  'PRKL-YD': ['UP', 'DN'],
-  'TVNL-YD': ['UP', 'DN'],
-  'KDMD-YD': ['UP', 'DN'],
-  'VM-YD': ['UP', 'DN'],  // Appears in multiple sections as VM is a major junction
-
-  // VM-MV Section - Double line section
-  'VM-SXR': ['UP', 'DN'],  // VM is junction with TPJ-VM, VM-PDY, and KPD-VM lines
-  'SXR-TUY': ['UP', 'DN'],
-  'TUY-PRT': ['UP', 'DN'],
-  'PRT-MBU': ['UP', 'DN'],
-  'MBU-NPM': ['UP', 'DN'],
-  'NPM-TDPR': ['UP', 'DN'],
-  'TDPR-CUPJ': ['UP', 'DN'],  // Junction with CUPJ-VRI line
-  'CUPJ-ALP': ['UP', 'DN'],
-  'ALP-PUC': ['UP', 'DN'],
-  'PUC-KII': ['UP', 'DN'],
-  'KII-CDM': ['UP', 'DN'],
-  'CDM-CLN': ['UP', 'DN'],
-  'CLN-SY': ['UP', 'DN'],
-  'SY-VDL': ['UP', 'DN'],
-  'VDL-ANP': ['UP', 'DN'],
-  'ANP-MV': ['UP', 'DN'],  // MV is junction with TPJ-MV and MV-TVR lines
-  'SXR-YD': ['UP', 'DN'],
-  'TUY-YD': ['UP', 'DN'],
-  'PRT-YD': ['UP', 'DN'],
-  'MBU-YD': ['UP', 'DN'],
-  'NPM-YD': ['UP', 'DN'],
-  'TDPR-YD': ['UP', 'DN'],
-  'CUPJ-YD': ['UP', 'DN'],  // Appears in both VM-MV and CUPJ-VRI sections
-  'ALP-YD': ['UP', 'DN'],
-  'PUC-YD': ['UP', 'DN'],
-  'KII-YD': ['UP', 'DN'],
-  'CDM-YD': ['UP', 'DN'],
-  'CLN-YD': ['UP', 'DN'],
-  'SY-YD': ['UP', 'DN'],
-  'VDL-YD': ['UP', 'DN'],
-  'ANP-YD': ['UP', 'DN'],
-  'MV-YD': ['UP', 'DN'],  // Appears in multiple sections as MV is a junction
-
-  // TPJ-MV Section - Single line
-  // 'TPJ-GOC': ['UP', 'DN'],  // Already listed in TPJ-VM, repeated here as it's a junction
-  'GOC-TRB': ['SINGLE'],
-  'TRB-SGM': ['SINGLE'],
-  'SGM-BAL': ['SINGLE'],
-  'BAL-ALK': ['SINGLE'],
-  'ALK-TJ': ['SINGLE'],  // Junction with TJ-KIK line
-  'TJ-TT': ['SINGLE'],
-  'TT-PDV': ['SINGLE'],
-  'PDV-SPL': ['SINGLE'],
-  'SPL-KMU': ['SINGLE'],
-  'KMU-ADT': ['SINGLE'],
-  'ADT-KTM': ['SINGLE'],
-  'KTM-MV': ['SINGLE'],  // MV is junction with VM-MV and MV-TVR lines
-  'TRB-YD': ['SINGLE'],
-  'SGM-YD': ['SINGLE'],
-  'BAL-YD': ['SINGLE'],
-  'ALK-YD': ['SINGLE'],
-  'TJ-YD': ['SINGLE'],  // Appears in both TPJ-MV and TJ-KIK sections
-  'TT-YD': ['SINGLE'],
-  'PDV-YD': ['SINGLE'],
-  'SPL-YD': ['SINGLE'],
-  'KMU-YD': ['SINGLE'],
-  'ADT-YD': ['SINGLE'],
-  'KTM-YD': ['SINGLE'],
-  // 'MV-YD': ['UP', 'DN'],  // Already listed in VM-MV, MV is a major junction
-
-  // TJ-KIK Section - Single line
-  'TJ-SMM': ['SINGLE'],  // TJ is junction with TPJ-MV line
-  'SMM-NMJ': ['SINGLE'],  // NMJ is junction with NMJ-MQ line
-  'NMJ-KDE': ['SINGLE'],
-  'KDE-KU': ['SINGLE'],
-  'KU-TVR': ['SINGLE'],  // TVR is junction with MV-TVR and TVR-KKDI lines
-  'TVR-KVL': ['SINGLE'],
-  'KVL-NGT': ['SINGLE'],  // NGT is junction with NGT-VLNK line
-  'NGT-NCR': ['SINGLE'],
-  'NCR-KIK': ['SINGLE'],
-  // 'TJ-YD': ['SINGLE'],  // Already listed in TPJ-MV
-  'SMM-YD': ['SINGLE'],
-  'NMJ-YD': ['SINGLE'],  // Appears in both TJ-KIK and NMJ-MQ sections
-  'KDE-YD': ['SINGLE'],
-  'KU-YD': ['SINGLE'],
-  'TVR-YD': ['SINGLE'],  // Appears in multiple sections as TVR is a junction
-  'KVL-YD': ['SINGLE'],
-  'NGT-YD': ['SINGLE'],  // Appears in both TJ-KIK and NGT-VLNK sections
-  'NCR-YD': ['SINGLE'],
-  'KIK-YD': ['SINGLE'],
-
-  // MV-TVR Section - Single line
-  'MV-PEM': ['SINGLE'],  // MV is junction with TPJ-MV and VM-MV lines
-  'PEM-NNM': ['SINGLE'],
-  'NNM-TVR': ['SINGLE'],  // TVR is junction with TJ-KIK and TVR-KKDI lines
-  // 'MV-YD': ['UP', 'DN'],  // Already listed in VM-MV and TPJ-MV
-  'PEM-YD': ['SINGLE'],
-  'NNM-YD': ['SINGLE'],
-  // 'TVR-YD': ['SINGLE'],  // Already listed in TJ-KIK, TVR is a junction
-
-  // NMJ-MQ Section - Single line
-  'NMJ-MQ': ['SINGLE'],  // NMJ is junction with TJ-KIK line
-  // 'NMJ-YD': ['SINGLE'],  // Already listed in TJ-KIK
-  'MQ-YD': ['SINGLE'],
-
-  // VM-PDY Section - Single line
-  'VM-CBU': ['SINGLE'],  // VM is junction with TPJ-VM, VM-MV, and KPD-VM lines
-  'CBU-PDY': ['SINGLE'],
-  // 'VM-YD': ['UP', 'DN'],  // Already listed in TPJ-VM and VM-MV
-  'CBU-YD': ['SINGLE'],
-  'PDY-YD': ['SINGLE'],
-
-  // KPD-VM Section - Single line
-  'KPD-VLR': ['SINGLE'],
-  'VLR-KNB': ['SINGLE'],
-  'KNB-ARV': ['SINGLE'],
-  'ARV-PRL': ['SINGLE'],
-  'PRL-AGM': ['SINGLE'],
-  'AGM-TJM': ['SINGLE'],
-  'TJM-TNM': ['SINGLE'],
-  'TNM-TNI': ['SINGLE'],
-  'TNI-TRK': ['SINGLE'],
-  'TRK-MMP': ['SINGLE'],
-  'MMP-VKM': ['SINGLE'],
-  'VKM-VM': ['SINGLE'],  // VM is junction with TPJ-VM, VM-MV, and VM-PDY lines
-  'KPD-YD': ['SINGLE'],
-  'VLR-YD': ['SINGLE'],
-  'KNB-YD': ['SINGLE'],
-  'KMM-YD': ['SINGLE'],
-  'ARV-YD': ['SINGLE'],
-  'PRL-YD': ['SINGLE'],
-  'AGM-YD': ['SINGLE'],
-  'TJM-YD': ['SINGLE'],
-  'TNM-YD': ['SINGLE'],
-  'TNI-YD': ['SINGLE'],
-  'TRK-YD': ['SINGLE'],
-  'MMP-YD': ['SINGLE'],
-  'VKM-YD': ['SINGLE'],
-  // 'VM-YD': ['UP', 'DN'],  // Already listed in multiple sections
-
-  // CUPJ-VRI Section - Single line
-  'CUPJ-KJKPD': ['SINGLE'],  // CUPJ is junction with VM-MV line
-  'KJKPD-VLU': ['SINGLE'],
-  'VLU-NVL': ['SINGLE'],
-  'NVL-UMG': ['SINGLE'],
-  'UMG-VRI': ['SINGLE'],  // VRI is junction with TPJ-VM line
-  // 'CUPJ-YD': ['UP', 'DN'],  // Already listed in VM-MV
-  'KJKPD-YD': ['SINGLE'],
-  'VLU-YD': ['SINGLE'],
-  'NVL-YD': ['SINGLE'],
-  'UMG-YD': ['SINGLE'],
-  // 'VRI-YD': ['UP', 'DN'],  // Already listed in TPJ-VM
-
-  // TPJ-TP Section - Single line
-  'TPJ-TP': ['SINGLE'],  // TPJ is junction with TPJ-VM and TPJ-MV lines
-  // 'TPJ-YD': ['UP', 'DN'],  // Already listed in TPJ-VM
-  'TP-YD': ['SINGLE'],
-
-  // NGT-VLNK Section - Single line
-  'NGT-VLNK': ['SINGLE'],  // NGT is junction with TJ-KIK line
-  // 'NGT-YD': ['SINGLE'],  // Already listed in TJ-KIK
-  'VLNK-YD': ['SINGLE'],
-
-  // TVR-KKDI Section - Single line
-  'TVR-TNK': ['SINGLE'],  // TVR is junction with TJ-KIK and MV-TVR lines
-  'TNK-TTP': ['SINGLE'],  // TTP is junction with TTP-AGX line
-  'TTP-AMM': ['SINGLE'],
-  'AMM-PKT': ['SINGLE'],
-  'PKT-PVI': ['SINGLE'],
-  'PVI-AYI': ['SINGLE'],
-  'AYI-ATQ': ['SINGLE'],
-  'ATQ-PYK': ['SINGLE'],
-  'PYK-KKDI': ['SINGLE'],
-  // 'TVR-YD': ['SINGLE'],  // Already listed in TJ-KIK and MV-TVR
-  'TNK-YD': ['SINGLE'],
-  'TTP-YD': ['SINGLE'],  // Appears in both TVR-KKDI and TTP-AGX sections
-  'TAM-YD': ['SINGLE'],
-  'AMM-YD': ['SINGLE'],
-  'PKT-YD': ['SINGLE'],
-  'PVI-YD': ['SINGLE'],
-  'AYI-YD': ['SINGLE'],
-  'ATQ-YD': ['SINGLE'],
-  'PYK-YD': ['SINGLE'],
-  'KKDI-YD': ['SINGLE'],
-
-  // TTP-AGX Section - Single line
-  'TTP-AGX': ['SINGLE'],  // TTP is junction with TVR-KKDI line
-  // 'TTP-YD': ['SINGLE'],  // Already listed in TVR-KKDI
-  'AGX-YD': ['SINGLE'],
-
-
-
-  // PTJ-SRR Section
-  "PTJ-MDKI": ["A", "B"],
-  "MDKI-ETMD": ["A", "B"],
-  "ETMD-WRA": ["A", "B"],
-  "WRA-CLMD": ["A", "B"],
-  "CLMD-KJKD": ["A", "B"],
-  "KJKD-KTKU": ["A", "B"],
-  "KTKU-PGT": ["A", "B"],
-  "PGT-PLL": ["UP", "DN"],
-  "PLL-LDY": ["UP", "DN"],
-  "LDY-OTP": ["UP", "DN"],
-  "OTP-MNUR": ["UP", "DN"],
-  "MNUR-SRR A": ["UP", "DN"],
-  "SRR A-SRR": ["Single"],
-
-  // SRR-CLT Section
-  "SRR-KRKD": ["UP", "DN"],
-  "KRKD-PTB": ["UP", "DN"],
-  "PTB-PUM": ["UP", "DN"],
-  "PUM-KTU": ["UP", "DN"],
-  "KTU-TUA": ["UP", "DN"],
-  "TUA-TIR": ["UP", "DN"],
-  "TIR-TA": ["UP", "DN"],
-  "TA-PGI": ["UP", "DN"],
-  "PGI-KN": ["UP", "DN"],
-  "KN-FK": ["UP", "DN"],
-  "FK-KUL": ["UP", "DN"],
-  "KUL-CLT": ["UP", "DN"],
-
-  // CLT-CAN Section
-  "CLT-WH": ["UP", "DN"],
-  "WH-ETR": ["UP", "DN"],
-  "ETR-QLD": ["UP", "DN"],
-  "QLD-TKT": ["UP", "DN"],
-  "TKT-BDJ": ["UP", "DN"],
-  "BDJ-MHE": ["UP", "DN"],
-  "MHE-TLY": ["UP", "DN"],
-  "TLY-ETK": ["UP", "DN"],
-  "ETK-CS": ["UP", "DN"],
-  "CS-CAN": ["UP", "DN"],
-
-  // CAN-MAQ Section
-  "CAN-VAPM": ["UP", "DN"],
-  "VAPM-KPQ": ["UP", "DN"],
-  "KPQ-PAZ": ["UP", "DN"],
-  "PAZ-PAY": ["UP", "DN"],
-  "PAY-CHV": ["UP", "DN"],
-  "CHV-NLE": ["UP", "DN"],
-  "NLE-KZE": ["UP", "DN"],
-  "KZE-KQK": ["UP", "DN"],
-  "KQK-KGQ": ["UP", "DN"],
-  "KGQ-KMQ": ["UP", "DN"],
-  "KMQ-MJS": ["UP", "DN"],
-  "MJS-ULL": ["UP", "DN"],
-  "ULL-NTVT": ["UP", "DN"],
-  "NTVT-MAQ": ["UP", "DN"],
-
-  // MAQ-TOK Section
-  "MAQ-NTVT": ["Single"],
-  "NTVT-MAJN": ["UP", "DN"],
-  "MAJN-PADIL": ["UP", "DN"],
-  "PADIL-JOKATTE": ["UP", "DN"],
-  "JOKATTE-TOK": ["Single"],
-
-  // SRR-NIL Section
-  "SRR-AAM": ["Single"],
-  "AAM-VNB": ["Single"],
-  "VNB-NIL": ["Single"],
-
-  // PGT-POY Section
-  "PGT-PGTN": ["Single"],
-  "PGTN-PDGM": ["Single"],
-  "PDGM-KLGD": ["Single"],
-  "KLGD-MMDA": ["Single"],
-  "MMDA-MXM": ["Single"],
-  "MXM-POY": ["Single"],
-
-  // POY-CNV Section
-  "POY-CNV": ["Single"],
-    // JTJ-ED Section
-  "JTJ-TPT": ["UP", "DN"],
-  "TPT-KEY": ["UP", "DN"],
-  "KEY-SLY": ["UP", "DN"],
-  "SLY-DST": ["UP", "DN"],
-  "DST-DPI": ["UP", "DN"],
-  "DPI-MAP": ["UP", "DN"],
-  "MAP-BDY": ["UP", "DN"],
-  "BDY-BQI": ["UP", "DN"],
-  "BQI-LCR": ["UP", "DN"],
-  "LCR-DSPT": ["UP", "DN"],
-  "DSPT-TNT": ["UP", "DN"],
-  "TNT-KPPR": ["UP", "DN"],
-  "KPPR-MGSJ": ["UP", "DN"],
-  "MGSJ-SA": ["UP", "DN"],
-  "SA-VRPD": ["UP", "DN"],
-  "VRPD-DC": ["UP", "DN"],
-  "DC-MVPM": ["UP", "DN"],
-  "MVPM-SGE": ["UP", "DN"],
-  "SGE-ANU": ["UP", "DN"],
-  "ANU-CV": ["UP", "DN"],
-  "CV-ED": ["UP", "DN"],
-  "TPT-YD": ["UP", "DN"],
-  "KEY-YD": ["UP", "DN"],
-  "SLY-YD": ["UP", "DN"],
-  "DST-YD": ["UP", "DN"],
-  "DPI-YD": ["UP", "DN"],
-  "MAP-YD": ["UP", "DN"],
-  "BDY-YD": ["UP", "DN"],
-  "BQI-YD": ["UP", "DN"],
-  "LCR-YD": ["UP", "DN"],
-  "DSPT-YD": ["UP", "DN"],
-  "TNT-YD": ["UP", "DN"],
-  "KPPR-YD": ["UP", "DN"],
-  "MGS-YD": ["UP", "DN"],
-  "VRPD-YD": ["UP", "DN"],
-  "DC-YD": ["UP", "DN"],
-  "MVPM-YD": ["UP", "DN"],
-  "SGE-YD": ["UP", "DN"],
-  "ANU-YD": ["UP", "DN"],
-  "CV-YD": ["UP", "DN"],
-  "ED-YD": ["UP", "DN"],
-
-  // ED-PTJ Section
-  "ED-TPM": ["UP", "DN"],
-  "TPM-PY": ["UP", "DN"],
-  "PY-IGR": ["UP", "DN"],
-  "IGR-VZ": ["UP", "DN"],
-  "VZ-UKL": ["UP", "DN"],
-  "UKL-TUP": ["UP", "DN"],
-  "TUP-VNJ": ["UP", "DN"],
-  "VNJ-SNO": ["UP", "DN"],
-  "SNO-SUU": ["UP", "DN"],
-  "SUU-IGU": ["UP", "DN"],
-  "IGU-PLMD": ["UP", "DN"],
-  "IGU-PTJ": ["UP", "DN"],
-  "PLMD-CBF": ["UP", "DN"],
-  "CBF-CBE": ["UP", "DN"],
-  "CBE-PTJ": ["UP", "DN"],
-  "TPM-YD": ["UP", "DN"],
-  "PY-YD": ["UP", "DN"],
-  "IGR-YD": ["UP", "DN"],
-  "VZ-YD": ["UP", "DN"],
-  "VNJ-YD": ["UP", "DN"],
-  "SUU-YD": ["UP", "DN"],
-  "SNO-YD": ["UP", "DN"],
-  "IGU-YD": ["UP", "DN"],
-  "PLMD-YD": ["UP", "DN"],
-  "CBF-YD": ["UP", "DN"],
-  "CBE-YD": ["UP", "DN"],
-  "PTJ-YD": ["UP", "DN"],
-
-  // ED-TP Section
-  "ED-CVD": ["Single"],
-  "CVD-PAS": ["Single"],
-  "PAS-URL": ["Single"],
-  "URL-KMD": ["Single"],
-  "KMD-PGR": ["Single"],
-  "PGR-MPLM": ["Single"],
-  "MPLM-KRR": ["Single"],
-  "KRR-VRQ": ["Single"],
-  "VRQ-MYU": ["Single"],
-
-  // KRR-DG Section
-  "KRR-VEI": ["Single"],
-  "VEI-PALM": ["Single"],
-  "PALM-EDU": ["Single"],
-  "EDU-DG": ["Single"],
-  "KRR-YD": ["Single"],
-  "VEI-YD": ["Single"],
-  "PALM-YD": ["Single"],
-  "EDU-YD": ["Single"],
-
-  // SA-VRI Section
-  "SA-SAMT": ["Single"],
-  "SAMT-SXT": ["Single"],
-  "SXT-MPLI": ["Single"],
-  "MPLI-ETP": ["Single"],
-  "ETP-ATU": ["Single"],
-
-  // SA-MTDM Section
-  "SA-MGSJ": ["UP", "DN"],
-  "SA-MGSJ NEW": ["UP", "DN"],
-  "MGSJ-OML": ["UP", "DN"],
-  "OML-MCRD": ["UP", "DN"],
-  "MCRD-MTDM": ["UP", "DN"],
-
-  // SA-KRR Section
-  "SA-MALR": ["Single"],
-  "MALR-RASP": ["Single"],
-  "RASP-KLGN": ["Single"],
-  "KLGN-NMKL": ["Single"],
-
-  // MTP-UAM Section
-  "MTP-QLR": ["Single"],
-  "QLR-HLG": ["Single"],
-  "HLG-ONR": ["Single"],
-  "ONR-WEL": ["Single"],
-
-  // PTJ-CNV Section
-  "CNV-PTJ": ["Single"],
-  "CNV-YD": ["Single"],
-
-  // CBE-MTP Section
-  "CBE-CBF": ["Single"],
-  "CBF-KAY": ["Single"],
-  "KAY-MTP": ["Single"],
-  // "CBE-YD": ["Single"]
-
-
-
-
-
-  // JTJ-ED Section (Main Line)
-  // "JTJ-TPT": ["UP", "DN"],
-  // "TPT-KEY": ["UP", "DN"],
-  // "KEY-SLY": ["UP", "DN"],
-  // "SLY-DST": ["UP", "DN"],
-  // "DST-DPI": ["UP", "DN"],
-  // "DPI-MAP": ["UP", "DN"],
-  // "MAP-BDY": ["UP", "DN"],
-  // "BDY-BQI": ["UP", "DN"],
-  // "BQI-LCR": ["UP", "DN"],
-  // "LCR-DSPT": ["UP", "DN"],
-  // "DSPT-TNT": ["UP", "DN"],
-  // "TNT-KPPR": ["UP", "DN"],
-  // "KPPR-MGSJ": ["UP", "DN"],
-  // "MGSJ-SA": ["UP", "DN"],
-  // "SA-VRPD": ["UP", "DN"],
-  // "VRPD-DC": ["UP", "DN"],
-  // "DC-MVPM": ["UP", "DN"],
-  // "MVPM-SGE": ["UP", "DN"],
-  // "SGE-ANU": ["UP", "DN"],
-  // "ANU-CV": ["UP", "DN"],
-  // "CV-ED": ["UP", "DN"],
-
-  // JTJ-ED Section (Yard Connections)
-  "JTJ-YD": ["UP", "DN"],
-  // "TPT-YD": ["UP", "DN"],
-  // "KEY-YD": ["UP", "DN"],
-  // "SLY-YD": ["UP", "DN"],
-  // "DST-YD": ["UP", "DN"],
-  // "DPI-YD": ["UP", "DN"],
-  // "MAP-YD": ["UP", "DN"],
-  // "BDY-YD": ["UP", "DN"],
-  // "BQI-YD": ["UP", "DN"],
-  // "LCR-YD": ["UP", "DN"],
-  // "DSPT-YD": ["UP", "DN"],
-  // "TNT-YD": ["UP", "DN"],
-  // "KPPR-YD": ["UP", "DN"],
-  "MGSJ-YD": ["UP", "DN"],
-  "SA-YD": ["UP", "DN"],
-  // "VRPD-YD": ["UP", "DN"],
-  // "DC-YD": ["UP", "DN"],
-  // "MVPM-YD": ["UP", "DN"],
-  // "SGE-YD": ["UP", "DN"],
-  // "ANU-YD": ["UP", "DN"],
-  // "CV-YD": ["UP", "DN"],
-  // "ED-YD": ["UP", "DN"],
-
-  // ED-PTJ Section (Main Line)
-  // "ED-TPM": ["UP", "DN"],
-  // "TPM-PY": ["UP", "DN"],
-  // "PY-IGR": ["UP", "DN"],
-  // "IGR-VZ": ["UP", "DN"],
-  // "VZ-UKL": ["UP", "DN"],
-  // "UKL-TUP": ["UP", "DN"],
-  // "TUP-VNJ": ["UP", "DN"],
-  // "VNJ-SNO": ["UP", "DN"],
-  // "SNO-SUU": ["UP", "DN"],
-  // "SUU-IGU": ["UP", "DN"],
-  // "IGU-PLMD": ["UP", "DN"],
-  // "IGU-PTJ": ["UP", "DN"],
-  // "PLMD-CBF": ["UP", "DN"],
-  // "CBF-CBE": ["UP", "DN"],
-  // "CBE-PTJ": ["UP", "DN"],
-
-  // ED-PTJ Section (Yard Connections)
-  // "TPM-YD": ["UP", "DN"],
-  // "PY-YD": ["UP", "DN"],
-  // "IGR-YD": ["UP", "DN"],
-  // "VZ-YD": ["UP", "DN"],
-  "UKL-YD": ["UP", "DN"],
-  "TUP-YD": ["UP", "DN"],
-  // "VNJ-YD": ["UP", "DN"],
-  // "SNO-YD": ["UP", "DN"],
-  // "SUU-YD": ["UP", "DN"],
-  // "IGU-YD": ["UP", "DN"],
-  // "PLMD-YD": ["UP", "DN"],
-  // "CBF-YD": ["UP", "DN"],
-  // "CBE-YD": ["UP", "DN"],
-  // "PTJ-YD": ["UP", "DN"],
-
-  // ED-TP Section (Single Line)
-  // "ED-CVD": ["Single"],
-  // "CVD-PAS": ["Single"],
-  // "PAS-URL": ["Single"],
-  // "URL-KMD": ["Single"],
-  // "KMD-PGR": ["Single"],
-  // "PGR-MPLM": ["Single"],
-  // "MPLM-KRR": ["Single"],
-  // "KRR-VRQ": ["Single"],
-  // "VRQ-MYU": ["Single"],
-  "MYU-MMH": ["Single"],
-  "MMH-LP": ["Single"],
-  "LP-KLT": ["Single"],
-  "KLT-PLI": ["Single"],
-  "PLI-PGN": ["Single"],
-  "PGN-EL": ["Single"],
-  "EL-MTNL": ["Single"],
-  "MTNL-TP": ["Single"],
-
-  // ED-TP Section (Yard Connections)
-  "CVD-YD": ["Single"],
-  "PAS-YD": ["Single"],
-  "URL-YD": ["Single"],
-  "KMD-YD": ["Single"],
-  "PGR-YD": ["Single"],
-  "MPLM-YD": ["Single"],
-  // "KRR-YD": ["Single"],
-  "VRQ-YD": ["Single"],
-  "MYU-YD": ["Single"],
-  "MMH-YD": ["Single"],
-  "LP-YD": ["Single"],
-  "KLT-YD": ["Single"],
-  "PLI-YD": ["Single"],
-  "PGN-YD": ["Single"],
-  "EL-YD": ["Single"],
-  "MTNL-YD": ["Single"],
-  // "TP-YD": ["Single"],
-
-  // KRR-DG Section (Single Line)
-  // "KRR-VEI": ["Single"],
-  // "VEI-PALM": ["Single"],
-  // "PALM-EDU": ["Single"],
-  // "EDU-DG": ["Single"],
+  "SRRB-VTK": ["UP", "DN"],
+  "VTK-WKI": ["UP", "DN"],
+  "WKI-MGK": ["UP", "DN"],
+  "MGK-PNQ": ["UP", "DN"],
+  "PNQ-TCR": ["UP", "DN"],
+  "TCR-OLR": ["UP", "DN"],
+  "OLR-PUK": ["UP", "DN"],
+  "PUK-IJK": ["UP", "DN"],
+  "IJK-CKI": ["UP", "DN"],
+  "CKI-KUC": ["UP", "DN"],
+  "KUC-AFK": ["UP", "DN"],
+  "AFK-AWY": ["UP", "DN"],
+  "AWY-KLMR": ["UP", "DN"],
+  "KLMR-IPL": ["UP", "DN"],
+  "IPL-VPDM": ["SINGLE"],
+  "IPL-ERN": ["UP", "DN"],
+  "ERN-ERS": ["UP", "DN"],
+  "ERS-CHTS": ["SINGLE"],
+  "ERN-ERSC": ["UP", "DN"],
+  "ERS-ERSC": ["SINGLE"],
+  "ERSC-ERSD": ["UP", "DN"],
+  "ERSD-IPN": ["SINGLE"],
+  "ERSC-ERM": ["SINGLE"],
+  "ERM-ERSD": ["SINGLE"],
   
-  // KRR-DG Section (Yard Connections)
-  // "KRR-YD": ["Single"],
-  // "VEI-YD": ["Single"],
-  // "PALM-YD": ["Single"],
-  // "EDU-YD": ["Single"],
-  "DG-YD": ["Single"],
+  "TCR-PNQ": ["UP", "DN"],
+  "PNQ-GUV": ["SINGLE"],
 
-  // SA-VRI Section (Single Line)
-  // "SA-SAMT": ["Single"],
-  // "SAMT-SXT": ["Single"],
-  // "SXT-MPLI": ["Single"],
-  // "MPLI-ETP": ["Single"],
-  // "ETP-ATU": ["Single"],
-  "ATU-CHSM": ["Single"],
-  "CHSM-PRV": ["Single"],
-  "PRV-MKSP": ["Single"],
-  "MKSP-VRI": ["Single"],
+  "ERS-TRTR": ["UP", "DN"],
+  "TRTR-MNTT": ["UP", "DN"],
+  "TRTR-IPN": ["SINGLE"],
+  "MNTT-PVRD": ["UP", "DN"],
+  "PVRD-VARD": ["UP", "DN"],
+  "VARD-KRPP": ["UP", "DN"],
+  "KRPP-ETM": ["UP", "DN"],
+  "ETM-KTYM": ["UP", "DN"],
+  "KTYM-CGV": ["UP", "DN"],
+  "CGV-CGY": ["UP", "DN"],
+  "CGY-TRVL": ["UP", "DN"],
+  "TRVL-CNGR": ["UP", "DN"],
+  "CNGR-MVLK": ["UP", "DN"],
+  "MVLK-KYJ": ["UP", "DN"],
 
-  // SA-VRI Section (Yard Connections)
-  "SAMT-YD": ["Single"],
-  "SXT-YD": ["Single"],
-  "MPLI-YD": ["Single"],
-  "ETP-YD": ["Single"],
-  "ATU-YD": ["Single"],
-  "CHSM-YD": ["Single"],
-  "PRV-YD": ["Single"],
-  "MKSP-YD": ["Single"],
-  // "VRI-YD": ["Single"],
+  "ERS-KUMM": ["SINGLE"],
+  "KUMM-TUVR": ["SINGLE"],
+  "TUVR-SRTL": ["SINGLE"],
+  "SRTL-MAKM": ["SINGLE"],
+  "MAKM-ALLP": ["SINGLE"],
+  "ALLP-AMPA": ["SINGLE"],
+  "AMPA-HAD": ["UP", "DN"],
+  "HAD-CHPD": ["UP", "DN"],
+  "CHPD-KYJ": ["UP", "DN"],
 
-  // SA-MTDM Section (Main Line)
-  // "SA-MGSJ": ["UP", "DN"],
-  // "SA-MGSJ NEW": ["UP", "DN"],
-  // "MGSJ-OML": ["UP", "DN"],
-  // "OML-MCRD": ["UP", "DN"],
-  // "MCRD-MTDM": ["UP", "DN"],
-  "MTDM-MTPP": ["UP", "DN"],
+  "KYJ-OCR": ["UP", "DN"],
+  "OCR-KPY": ["UP", "DN"],
+  "KPY-STKT": ["UP", "DN"],
+  "STKT-PRND": ["UP", "DN"],
+  "PRND-QLN": ["UP", "DN"],
 
-  // SA-MTDM Section (Yard Connections)
-  "OML-YD": ["UP", "DN"],
-  "MCRD-YD": ["UP", "DN"],
-  "MTDM-YD": ["UP", "DN"],
-  "MTPP-YD": ["UP", "DN"],
+  "QLN-PVU": ["UP", "DN"],
+  "PVU-VAK": ["UP", "DN"],
+  "VAK-KVU": ["UP", "DN"],
+  "KVU-MQU": ["UP", "DN"],
+  "MQU-KZK": ["UP", "DN"],
+  "KZK-TVCN": ["UP", "DN"],
+  "TVCN-TVC": ["UP", "DN"],
 
-  // SA-KRR Section (Single Line)
-  // "SA-MALR": ["Single"],
-  // "MALR-RASP": ["Single"],
-  // "RASP-KLGN": ["Single"],
-  // "KLGN-NMKL": ["Single"],
-  "NMKL-MONR": ["Single"],
-  "MONR-KRR": ["Single"],
+  "TVC-TVCS": ["SINGLE"],
+  "TVCS-NYY": ["SINGLE"],
+  "NYY-PASA": ["SINGLE"],
+  "PASA-KZT": ["SINGLE"],
+  "KZT-ERL": ["SINGLE"],
+  "ERL-NJT": ["SINGLE"],
+  "NJT-NCJ": ["UP", "DN"],
 
-  // MTP-UAM Section (Single Line)
-  // "MTP-QLR": ["Single"],
-  // "QLR-HLG": ["Single"],
-  // "HLG-ONR": ["Single"],
-  // "ONR-WEL": ["Single"],
-  "WEL-AVK": ["Single"],
-  "AVK-KXT": ["Single"],
-  "KXT-LOV": ["Single"],
-  "LOV-UAM": ["Single"],
+  "NCJ-AAY": ["UP", "DN"],
+  "AAY-NPK": ["UP", "DN"],
+  "NPK-VLY": ["UP", "DN"],
+  "VLY-NNN": ["UP", "DN"],
+  "NNN-MP": ["UP", "DN"],
+  "MP-TEN": ["UP", "DN"],
 
-  // MTP-UAM Section (Yard Connections)
-  "QLR-YD": ["Single"],
-  "HLG-YD": ["Single"],
-  "ONR-YD": ["Single"],
-  "WEL-YD": ["Single"],
-  "AVK-YD": ["Single"],
-  "KXT-YD": ["Single"],
-  "LOV-YD": ["Single"],
-  "UAM-YD": ["Single"],
-
-  // PTJ-CNV Section (Single Line)
-  // "CNV-PTJ": ["Single"],
-
-  // CBE-MTP Section (Single Line)
-  // "CBE-CBF": ["Single"],
-  // "CBF-KAY": ["Single"],
-  // "KAY-MTP": ["Single"],
-
-  // Additional Yard Connections
-  // "CNV-YD": ["Single"],
-  "KAY-YD": ["Single"]
+  "NCJ-CAPE": ["UP", "DN"]
 };
 
 
